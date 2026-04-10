@@ -21,143 +21,188 @@
     }
 
     .contenedor-principal {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      background-color: #111111;
+      background-color: #111;
       border: 1px solid #2a2a2a;
       border-radius: 18px;
       padding: 30px;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 30px rgba(255,255,255,0.05);
     }
 
     h1 {
       text-align: center;
       margin-bottom: 30px;
-      font-size: 32px;
-      letter-spacing: 1px;
-      color: #ffffff;
+      font-size: 28px;
     }
 
     .secciones {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 30px;
-      align-items: start;
+      gap: 25px;
     }
 
     .bloque {
       background-color: #151515;
       border: 1px solid #2f2f2f;
       border-radius: 16px;
-      padding: 24px;
+      padding: 20px;
     }
 
     h2 {
-      margin-bottom: 18px;
-      font-size: 22px;
-      color: #ffffff;
+      margin-bottom: 15px;
+      font-size: 20px;
       border-bottom: 1px solid #2f2f2f;
-      padding-bottom: 10px;
+      padding-bottom: 8px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      overflow: hidden;
-      border-radius: 12px;
     }
 
     th, td {
       border: 1px solid #2f2f2f;
       text-align: center;
-      padding: 12px 10px;
+      padding: 8px;
     }
 
     th {
-      background-color: #ffffff;
-      color: #000000;
+      background: #fff;
+      color: #000;
     }
 
     td {
-      background-color: #101010;
-      color: #f5f5f5;
+      background: #101010;
     }
 
-    input[type="text"] {
-      width: 50px;
-      height: 36px;
-      text-align: center;
-      border: 1px solid #555555;
+    /* 🔥 INPUT PEQUEÑO Y ELEGANTE */
+    .entrada-f {
+      width: 35px;
+      height: 35px;
       border-radius: 8px;
-      background-color: #000000;
-      color: #ffffff;
-      font-size: 16px;
+      border: 1px solid #666;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      background: #fff;
+      color: #000;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      box-shadow: 0 0 5px #fff;
     }
 
     .panel-derecho {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
     }
 
     .interruptores {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 10px;
     }
 
     .interruptor-item {
-      background-color: #0d0d0d;
-      border: 1px solid #2f2f2f;
-      border-radius: 12px;
-      padding: 16px;
       display: flex;
       justify-content: space-between;
-      font-size: 18px;
+      padding: 10px;
+      background: #0d0d0d;
+      border-radius: 10px;
+      border: 1px solid #2f2f2f;
     }
 
     input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      accent-color: #ffffff;
+      width: 18px;
+      height: 18px;
+      accent-color: white;
+    }
+
+    /* 🔥 BOTONES PRO */
+    .acciones {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #btn-listo {
+      background: #ffffff;
+      color: #000;
+    }
+
+    #btn-listo:hover {
+      background: #dcdcdc;
+    }
+
+    #btn-reset {
+      background: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    #btn-reset:hover {
+      background: #333;
+    }
+
+    #mensaje-validacion {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+      min-height: 20px;
     }
 
     .salida-led {
-      background-color: #0d0d0d;
-      border: 1px solid #2f2f2f;
-      border-radius: 14px;
-      padding: 24px;
       text-align: center;
+    }
+
+    #led {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: bold;
     }
 
     @keyframes brillo {
       0% { box-shadow: 0 0 5px #fff; }
-      50% { box-shadow: 0 0 25px #fff; }
+      50% { box-shadow: 0 0 20px #fff; }
       100% { box-shadow: 0 0 5px #fff; }
     }
 
     .led-on {
-      background-color: #ffffff;
-      color: #000000;
+      background: #fff;
+      color: #000;
       animation: brillo 1s infinite;
     }
 
     .led-off {
-      background-color: #000000;
-      color: #ffffff;
+      background: #000;
+      color: #fff;
     }
 
-    #led {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      border: 2px solid #ffffff;
-      font-size: 28px;
-      font-weight: bold;
+    @media (max-width: 900px) {
+      .secciones {
+        grid-template-columns: 1fr;
+      }
     }
+
   </style>
 </head>
 
@@ -168,47 +213,48 @@
 
   <div class="secciones">
 
+    <!-- TABLA -->
     <div class="bloque">
       <h2>Tabla de verdad</h2>
       <table>
         <thead>
           <tr>
-            <th>d</th>
-            <th>c</th>
-            <th>b</th>
-            <th>a</th>
-            <th>f</th>
+            <th>d</th><th>c</th><th>b</th><th>a</th><th>f</th>
           </tr>
         </thead>
         <tbody>
-
-          <!-- 16 FILAS CORREGIDAS -->
-          <tr><td>0</td><td>0</td><td>0</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>0</td><td>0</td><td>0</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>0</td><td>0</td><td>1</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>0</td><td>0</td><td>1</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>0</td><td>1</td><td>0</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>0</td><td>1</td><td>0</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>0</td><td>1</td><td>1</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>0</td><td>1</td><td>1</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>0</td><td>0</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>0</td><td>0</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>0</td><td>1</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>0</td><td>1</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>1</td><td>0</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>1</td><td>0</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>1</td><td>1</td><td>0</td><td><input class="entrada-f" maxlength="1"></td></tr>
-          <tr><td>1</td><td>1</td><td>1</td><td>1</td><td><input class="entrada-f" maxlength="1"></td></tr>
-
+          <tr><td>0</td><td>0</td><td>0</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>0</td><td>0</td><td>0</td><td>1</td><td><input class="entrada-f"></td></tr>
+          <tr><td>0</td><td>0</td><td>1</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>0</td><td>0</td><td>1</td><td>1</td><td><input class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>0</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>0</td><td>1</td><td><input class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>1</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>1</td><td>1</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>0</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>0</td><td>1</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>1</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>1</td><td>1</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>0</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>0</td><td>1</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>1</td><td>0</td><td><input class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>1</td><td>1</td><td><input class="entrada-f"></td></tr>
         </tbody>
       </table>
+
+      <div class="acciones">
+        <button id="btn-listo">Listo</button>
+        <button id="btn-reset">Reset</button>
+      </div>
+
+      <p id="mensaje-validacion"></p>
     </div>
 
+    <!-- PANEL DERECHO -->
     <div class="panel-derecho">
 
       <div class="bloque">
         <h2>Interruptores</h2>
-
         <div class="interruptores">
           <div class="interruptor-item">d <input type="checkbox" id="switch-d"></div>
           <div class="interruptor-item">c <input type="checkbox" id="switch-c"></div>
@@ -217,17 +263,14 @@
         </div>
       </div>
 
-      <div class="bloque">
+      <div class="bloque salida-led">
         <h2>Salida</h2>
-        <div class="salida-led">
-          <span id="led">0</span>
-        </div>
+        <span id="led">0</span>
       </div>
 
     </div>
 
   </div>
-
 </div>
 
 <script src="circuito.js"></script>

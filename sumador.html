@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Circuitos</title>
+  <link rel="stylesheet" href="css/simulador.css">
+  <link rel="stylesheet" href="css/sumador.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <div class="menu-principal">
+      <nav class="navegacion">
+        <ul class="navegacion__lista">
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="index.html">INICIO</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="practica.html">PRÁCTICA</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="simulador.html">SIMULADOR</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="sumador.html">SUMADOR</a></li>
+        </ul>
+      </nav>
+      <h1 class="encabezado__titulo">Práctica</h1>
+      <p class="encabezado__subtitulo">Aplicación de Sistemas Digitales</p>
+    </div>
+  </header>
+
+  <div class="contenedor-principal">
+    <h1>Sumador Binario de 5 Bits</h1>
+
+    <div class="secciones">
+
+      <div class="bloque">
+        <h2>Entradas</h2>
+
+        <div class="grupo-operandos">
+          <h3>Operando A</h3>
+          <div class="interruptores">
+            <div class="interruptor-item">A4 <input type="checkbox" id="a4"></div>
+            <div class="interruptor-item">A3 <input type="checkbox" id="a3"></div>
+            <div class="interruptor-item">A2 <input type="checkbox" id="a2"></div>
+            <div class="interruptor-item">A1 <input type="checkbox" id="a1"></div>
+            <div class="interruptor-item">A0 <input type="checkbox" id="a0"></div>
+          </div>
+        </div>
+
+        <div class="grupo-operandos">
+          <h3>Operando B</h3>
+          <div class="interruptores">
+            <div class="interruptor-item">B4 <input type="checkbox" id="b4"></div>
+            <div class="interruptor-item">B3 <input type="checkbox" id="b3"></div>
+            <div class="interruptor-item">B2 <input type="checkbox" id="b2"></div>
+            <div class="interruptor-item">B1 <input type="checkbox" id="b1"></div>
+            <div class="interruptor-item">B0 <input type="checkbox" id="b0"></div>
+          </div>
+        </div>
+
+        <div class="acciones">
+          <button id="btn-listo" type="button">Listo</button>
+          <button id="btn-reset" type="button">Reset</button>
+        </div>
+
+        <p id="mensaje-validacion"></p>
+      </div>
+
+      <div class="panel-derecho">
+
+        <div class="bloque">
+          <h2>Salida</h2>
+          <div class="salidas-binarias">
+            <div class="salida-item">
+              <span class="salida-etiqueta">S4</span>
+              <span class="led" id="led-s4">0</span>
+            </div>
+            <div class="salida-item">
+              <span class="salida-etiqueta">S3</span>
+              <span class="led" id="led-s3">0</span>
+            </div>
+            <div class="salida-item">
+              <span class="salida-etiqueta">S2</span>
+              <span class="led" id="led-s2">0</span>
+            </div>
+            <div class="salida-item">
+              <span class="salida-etiqueta">S1</span>
+              <span class="led" id="led-s1">0</span>
+            </div>
+            <div class="salida-item">
+              <span class="salida-etiqueta">S0</span>
+              <span class="led" id="led-s0">0</span>
+            </div>
+            <div class="salida-item">
+              <span class="salida-etiqueta">SC</span>
+              <span class="led" id="led-sc">0</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/sumador.js"></script>
+
+</body>
+</html>

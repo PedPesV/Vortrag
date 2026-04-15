@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vortrag</title>
+  <link rel="stylesheet" href="css/estilos_practica.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="menu-principal">
+      <nav class="navegacion">
+        <ul class="navegacion__lista">
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="index.html">INICIO</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="practica.html">PRÁCTICA</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="simulador.html">SIMULADOR</a></li>
+        </ul>
+      </nav>
+      <h1 class="encabezado__titulo">Práctica</h1>
+      <p class="encabezado__subtitulo">Aplicación de Sistemas Digitales</p>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+
+    <!-- SECCIÓN 9 -->
+    <section id="hardware" class="seccion">
+      <div class="seccion__contenedor">
+        <h2 class="seccion__titulo">Implementación en Hardware</h2>
+        <div class="seccion__imagen">
+          <img src="imgs/quartus.png" alt="Captura de Quartus" class="seccion__img" width=50%/>
+        </div>
+        <p class="seccion__texto">
+          Los sumadores pueden implementarse utilizando compuertas lógicas, VHDL y FPGAs.
+          <br />
+          En herramientas como Quartus, se pueden diseñar, simular e implementar estos circuitos.
+        </p>
+        <ul class="lista-implementacion">
+          <li class="lista-implementacion__elemento">Compuertas lógicas (AND, OR, XOR)</li>
+          <li class="lista-implementacion__elemento">VHDL</li>
+          <li class="lista-implementacion__elemento">FPGA / CPLD</li>
+          <li class="lista-implementacion__elemento">Quartus (diseño y simulación)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 10 -->
+    <section id="materiales" class="seccion seccion--alternada">
+      <div class="seccion__contenedor">
+        <h2 class="seccion__titulo">Lista de Materiales</h2>
+        <ul class="lista-materiales">
+          <li class="lista-materiales__elemento">MAX II</li>
+          <li class="lista-materiales__elemento">Barra de LEDs</li>
+          <li class="lista-materiales__elemento">Resistencias</li>
+          <li class="lista-materiales__elemento">Protoboard</li>
+          <li class="lista-materiales__elemento">Programa Quartus</li>
+          <li class="lista-materiales__elemento">Fuente de alimentación</li>
+          <li class="lista-materiales__elemento">DIP switch de 9 posiciones</li>
+          <li class="lista-materiales__elemento">Barra de 10 leds</li>
+          <li class="lista-materiales__elemento">Cables con punta hembra-macho</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DESARROLLO -->
+    <section id="desarrollo" class="seccion">
+      <div class="seccion__contenedor">
+        <h2 class="seccion__titulo">Desarrollo</h2>
+
+        <!-- Semisumador -->
+        <div class="desarrollo__bloque">
+          <p class="seccion__texto">
+            Comenzamos calculando el semisumador. Tenemos que:
+          </p>
+          <div class="tabla-contenedor">
+            <table class="tabla-verdad">
+              <thead class="tabla-verdad__encabezado">
+                <tr class="tabla-verdad__fila tabla-verdad__fila--encabezado">
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">Ao</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">Bo</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">Co</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">So</th>
+                </tr>
+              </thead>
+              <tbody class="tabla-verdad__cuerpo">
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="seccion__texto">De esto sacamos que las ecuaciones son:</p>
+          <div class="ecuaciones">
+            <p class="ecuaciones__linea">So = Ao ⊕ Bo</p>
+            <p class="ecuaciones__linea">Co = AoBo</p>
+          </div>
+        </div>
+
+        <!-- Sumador 1 -->
+        <div class="desarrollo__bloque">
+          <p class="seccion__texto">
+            Continuamos calculando el primer sumador. Tenemos que:
+          </p>
+          <div class="tabla-contenedor">
+            <table class="tabla-verdad">
+              <thead class="tabla-verdad__encabezado">
+                <tr class="tabla-verdad__fila tabla-verdad__fila--encabezado">
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">A1</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">B1</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">Co</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">C1</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">S1</th>
+                </tr>
+              </thead>
+              <tbody class="tabla-verdad__cuerpo">
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="seccion__texto">De esto sacamos que las ecuaciones son:</p>
+          <div class="ecuaciones">
+            <p class="ecuaciones__linea">S1 = A1 ⊕ B1 ⊕ C1</p>
+            <p class="ecuaciones__linea">C1 = B1Co + A1Co + A1B1</p>
+          </div>
+        </div>
+
+        <!-- Sumador 2 -->
+        <div class="desarrollo__bloque">
+          <p class="seccion__texto">
+            Continuamos calculando el segundo sumador. Tenemos que:
+          </p>
+          <div class="tabla-contenedor">
+            <table class="tabla-verdad">
+              <thead class="tabla-verdad__encabezado">
+                <tr class="tabla-verdad__fila tabla-verdad__fila--encabezado">
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">A2</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">B2</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">C1</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">C2</th>
+                  <th class="tabla-verdad__celda tabla-verdad__celda--titulo">S2</th>
+                </tr>
+              </thead>
+              <tbody class="tabla-verdad__cuerpo">
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">0</td></tr>
+                <tr class="tabla-verdad__fila"><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td><td class="tabla-verdad__celda">1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="seccion__texto">De esto sacamos que las ecuaciones son:</p>
+          <div class="ecuaciones">
+            <p class="ecuaciones__linea">S2 = A2 ⊕ B2 ⊕ C2</p>
+            <p class="ecuaciones__linea">C2 = B2C1 + A2C1 + A2B2</p>
+          </div>
+        </div>
+
+        <!-- Ecuaciones generales -->
+        <div class="desarrollo__bloque desarrollo__bloque--resumen">
+          <p class="seccion__texto">
+            Como los sumadores repiten el mismo patrón, no es necesario terminar de hacerlo,
+            simplemente cambiamos el nombre de las variables.
+          </p>
+          <p class="seccion__texto">Debido a esto podemos obtener todas las ecuaciones, las cuales son:</p>
+          <div class="ecuaciones ecuaciones--completas">
+            <p class="ecuaciones__linea">So = Ao ⊕ Bo</p>
+            <p class="ecuaciones__linea ecuaciones__linea--separada">S1 = A1 ⊕ B1 ⊕ C1</p>
+            <p class="ecuaciones__linea">C1 = B1Co + A1Co + A1B1</p>
+            <p class="ecuaciones__linea ecuaciones__linea--separada">S2 = A2 ⊕ B2 ⊕ C2</p>
+            <p class="ecuaciones__linea">C2 = B2C1 + A2C1 + A2B2</p>
+            <p class="ecuaciones__linea ecuaciones__linea--separada">S3 = A3 ⊕ B3 ⊕ C3</p>
+            <p class="ecuaciones__linea">C3 = B3C2 + A3C2 + A3B3</p>
+            <p class="ecuaciones__linea ecuaciones__linea--separada">S4 = A4 ⊕ B4 ⊕ C4</p>
+            <p class="ecuaciones__linea">C4 = B4C3 + A4C3 + A4B4</p>
+          </div>
+        </div>
+
+        <!-- Paso: Quartus -->
+        <div class="desarrollo__bloque desarrollo__paso">
+          <p class="seccion__texto">Una vez obtenidas todas las ecuaciones, podemos pasar a Quartus.</p>
+          <p class="seccion__texto">Aquí, crearemos un nuevo proyecto y escribimos el código.</p>
+          <div class="seccion__imagen">
+            <img src="imgs/codigo.jpeg" alt="" width="100%">
+          </div>
+        </div>
+
+        <!-- Paso: Protoboard -->
+        <div class="desarrollo__bloque desarrollo__paso">
+          <p class="seccion__texto">Armamos la protoboard.</p>
+          <div class="seccion__imagen">
+            <img src="imgs/proto.jpeg" alt="">
+          </div>
+        </div>
+
+        <!-- Paso: Placa -->
+        <div class="desarrollo__bloque desarrollo__paso">
+          <p class="seccion__texto">Conectamos la placa.</p>
+          <div class="seccion__imagen">
+            <img src="imgs/conexiones.jpeg" alt="">
+          </div>
+        </div>
+
+        <!-- Paso: Subir código -->
+        <div class="desarrollo__bloque desarrollo__paso">
+          <p class="seccion__texto">Compilamos el código y lo subimos a la placa.</p>
+          <div class="seccion__imagen">
+           <img src="imgs/compilador.jpeg" alt="">
+          </div>
+          <div class="seccion__imagen">
+           <img src="imgs/subido.jpeg" alt="">
+          </div>
+        </div>
+
+        <!-- Paso: Pruebas -->
+        <div class="desarrollo__bloque desarrollo__paso">
+          <p class="seccion__texto">Hacemos pruebas para ver si el código se subió correctamente.</p>
+          <div class="seccion__imagen">
+            <img src="imgs/01_cincodos.jpeg" alt="">
+          </div>
+          <div class="seccion__imagen">
+           <img src="imgs/02_cuatrosiete.jpeg" alt="">
+          </div>
+          <div class="seccion__imagen">
+           <img src="imgs/03_tresiete.jpeg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONCLUSIÓN -->
+    <section id="conclusion" class="seccion seccion--alternada">
+      <div class="seccion__contenedor">
+        <h2 class="seccion__titulo">Conclusión</h2>
+        <p class="seccion__texto">En esta práctica se llevó a cabo el diseño e implementación de un sumador de 5 bits, 
+          el cual permite realizar la suma de dos números binarios de manera eficiente. Se observó que, 
+          al operar con números de 5 bits, el resultado puede generar un acarreo adicional, por lo que la 
+          salida final se expresa en 6 bits para representar correctamente el resultado sin pérdida de información.
+          Asimismo, se logró comprender el funcionamiento de los sumadores binarios, así como la importancia del 
+          bit de acarreo en operaciones digitales. Durante el desarrollo, se reforzaron conceptos relacionados con 
+          lógica digital, como el uso de compuertas lógicas y la propagación del acarreo entre etapas.
+          Finalmente, se concluye que este tipo de circuitos constituye una base fundamental en sistemas 
+          digitales más complejos, ya que permiten la realización de operaciones aritméticas esenciales 
+          dentro de procesadores y otros dispositivos electrónicos.</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

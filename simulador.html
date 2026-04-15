@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Circuitos</title>
+  <link rel="stylesheet" href="css/simulador.css">
+</head>
+
+<body>
+
+<header class="encabezado">
+    <div class="menu-principal">
+      <nav class="navegacion">
+        <ul class="navegacion__lista">
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="index.html">INICIO</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="practica.html">PRÁCTICA</a></li>
+          <li class="navegacion__elemento"><a class="navegacion__enlace" href="simulador.html">SIMULADOR</a></li>
+        </ul>
+      </nav>
+      <h1 class="encabezado__titulo">Práctica</h1>
+      <p class="encabezado__subtitulo">Aplicación de Sistemas Digitales</p>
+    </div>
+  </header>
+
+<div class="contenedor-principal">
+  <h1>Simulador de Circuitos</h1>
+
+  <div class="secciones">
+
+    <div class="bloque">
+      <h2>Tabla de verdad</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>d</th><th>c</th><th>b</th><th>a</th><th>f</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0</td><td>0</td><td>0</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>0</td><td>0</td><td>0</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>0</td><td>0</td><td>1</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>0</td><td>0</td><td>1</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>0</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>0</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>1</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>0</td><td>1</td><td>1</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>0</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>0</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>1</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>0</td><td>1</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>0</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>0</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>1</td><td>0</td><td><input type="text" class="entrada-f"></td></tr>
+          <tr><td>1</td><td>1</td><td>1</td><td>1</td><td><input type="text" class="entrada-f"></td></tr>
+        </tbody>
+      </table>
+
+      <div class="acciones">
+        <button id="btn-listo">Listo</button>
+        <button id="btn-reset">Reset</button>
+      </div>
+
+      <p id="mensaje-validacion"></p>
+    </div>
+
+    <div class="panel-derecho">
+
+      <div class="bloque">
+        <h2>Interruptores</h2>
+        <div class="interruptores">
+          <div class="interruptor-item">d <input type="checkbox" id="switch-d"></div>
+          <div class="interruptor-item">c <input type="checkbox" id="switch-c"></div>
+          <div class="interruptor-item">b <input type="checkbox" id="switch-b"></div>
+          <div class="interruptor-item">a <input type="checkbox" id="switch-a"></div>
+        </div>
+      </div>
+
+      <div class="bloque salida-led">
+        <h2>Salida</h2>
+        <span id="led">0</span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="js/circuito.js"></script>
+
+</body>
+</html>
